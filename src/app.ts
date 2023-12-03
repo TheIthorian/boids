@@ -5,7 +5,7 @@ export class App {
         this.run(document);
     }
 
-    private run(document: Document) {
+    private async run(document: Document) {
         new GameScene(document).addBox().render();
     }
 }

@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     removeError();
 
     try {
-        new App(document).run(document);
+        new App(document);
     } catch (err) {
         console.log(err);
         addError(err);
