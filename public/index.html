@@ -7,5 +7,22 @@
         <script type="module" defer src="./index.js"></script>
     </head>
 
-    <div class="container"> </div>
+    <style>
+        * {
+            margin: 0;
+        }
+        #error {
+            color: var(--error);
+            border: solid 2px var(--error);
+            border-radius: 1px;
+            padding: 3px;
+            display: none;
+        }
+        #error.active {
+            display: block;
+        }
+    </style>
+
+    <div id="container"> </div>
+    <div id="error"></div>
 </html>

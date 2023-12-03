@@ -1,1 +1,1 @@
-console.log('TODO');
+export { App } from './app';
