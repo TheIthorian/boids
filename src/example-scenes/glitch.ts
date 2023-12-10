@@ -13,7 +13,8 @@ export class GlitchScene extends BaseScene {
         this.composer.addPass(new RenderPass(this.scene, this.camera));
 
         const glitchPass = new GlitchPass();
-        glitchPass.goWild = true;
+        glitchPass.goWild = false;
+
         this.composer.addPass(glitchPass);
 
         this.composer.addPass(new OutputPass());
