@@ -10,7 +10,12 @@ export class App {
             throw TypeError(`${sceneType} is not a valid type`);
         }
 
-        sceneConstructor(this.document).addBox().render();
+        const scene = sceneConstructor(this.document);
+        scene.addBox().render();
+
+        window.addEventListener('resize', () => {
+            scene.resize(window.innerWidth, window.innerHeight);
+        });
     }
 
     public static getSceneTypes() {

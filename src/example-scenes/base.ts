@@ -21,6 +21,12 @@ export abstract class BaseScene {
         this.cubes = [];
     }
 
+    public resize(width: number, height: number) {
+        this.camera.aspect = width / height;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(width, height);
+    }
+
     protected initiate(): void {}
 
     public addBox() {
